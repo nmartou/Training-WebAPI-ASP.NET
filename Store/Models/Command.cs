@@ -1,5 +1,6 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Store.Models;
 
@@ -20,6 +21,14 @@ class Command
     [Required]
     [DefaultValue(false)]
     public bool IsPaid { get; set; }
+
+    [ForeignKey("Person")]
+    public int SellerID { get; set; }
+
+    [ForeignKey("Person")]
+    public int Buyer { get; set; }
+
+    public Person Person { get; set; }
 
     // public int InvoiceID { get; set; } // Theorical foreign key nullable
 
