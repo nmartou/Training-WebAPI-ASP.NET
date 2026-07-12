@@ -17,7 +17,7 @@ class Price
     [Required]
     [DefaultValue(0.0f)]
     [Range(0.0f, 100.0f, ErrorMessage = "Discount is out of range")]
-    public float discount { get; set; }
+    public float Discount { get; set; }
 
     [Required]
     public DateTime DiscountEndDate { get; set; } = System.DateTime.Now;
