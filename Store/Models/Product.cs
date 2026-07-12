@@ -22,7 +22,7 @@ public class Product
     [Required]
     [Range(0, int.MaxValue, ErrorMessage = "Stock must be positive or 0")]
     [DefaultValue(0)]
-    public string Stock { get; set; }
+    public int Stock { get; set; }
 
     [Required]
     public int PriceID { get; set; }
