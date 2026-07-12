@@ -22,13 +22,13 @@ public class Command
     [DefaultValue(false)]
     public bool IsPaid { get; set; }
 
-    [ForeignKey("Person")]
+    [ForeignKey("Seller")]
     public int SellerID { get; set; }
+    public Person Seller { get; set; }
 
-    [ForeignKey("Person")]
-    public int Buyer { get; set; }
-
-    public Person Person { get; set; }
+    [ForeignKey("Buyer")]
+    public int BuyerID { get; set; }
+    public Person Buyer { get; set; }
 
     // public int InvoiceID { get; set; } // Theorical foreign key nullable
 
