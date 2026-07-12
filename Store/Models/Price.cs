@@ -19,6 +19,6 @@ public class Price
     [Range(0.0f, 100.0f, ErrorMessage = "Discount is out of range")]
     public float Discount { get; set; }
 
-    [Required]
-    public DateTime DiscountEndDate { get; set; } = System.DateTime.Now;
+    [Column(TypeName = "DateTime")]
+    public DateTime? DiscountEndDate { get; set; }
 }

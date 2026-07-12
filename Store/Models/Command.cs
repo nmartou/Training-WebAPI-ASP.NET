@@ -16,16 +16,19 @@ public class Command
     [Required]
     [Range(0.0d, double.MaxValue, ErrorMessage = "Total price shoul be positive or zero")]
     [DefaultValue(0.0d)]
+    [Column(TypeName = "money")]
     public decimal TotalPrice { get; set; }
 
     [Required]
     [DefaultValue(false)]
     public bool IsPaid { get; set; }
 
+    [Required]
     [ForeignKey("Seller")]
     public int SellerID { get; set; }
     public Person Seller { get; set; }
 
+    [Required]
     [ForeignKey("Buyer")]
     public int BuyerID { get; set; }
     public Person Buyer { get; set; }

@@ -13,7 +13,7 @@ public class Product
     public string Name { get; set; }
 
     [StringLength(50)]
-    public string Brand { get; set; }
+    public string? Brand { get; set; }
 
     [Required]
     [StringLength(255)]
