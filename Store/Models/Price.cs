@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Store.Models;
 
-class Price
+public class Price
 {
     [Key]
     public int PriceID { get; set; }

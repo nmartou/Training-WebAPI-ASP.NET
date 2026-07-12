@@ -1,9 +1,8 @@
 using System.ComponentModel.DataAnnotations;
-using Store.models;
 
 namespace Store.Models;
 
-class ProductCommand
+public class ProductCommand
 {
     [Key]
     public int ProductCommandID { get; set; }

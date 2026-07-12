@@ -1,10 +1,9 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Store.Models;
 
-namespace Store.models;
+namespace Store.Models;
 
-class Product
+public class Product
 {
     [Key]
     public int ProductID { get; set; }

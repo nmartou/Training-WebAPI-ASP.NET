@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Store.Models;
 
-class Command
+public class Command
 {
     [Key]
     public int CommandID { get; set; }

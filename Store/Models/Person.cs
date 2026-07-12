@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Store.Models;
 
-class Person
+public class Person
 {
     [Key]
     public int PersonID { get; set; }
