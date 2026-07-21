@@ -29,11 +29,11 @@ dotnet ef database drop
 Run the backend project in debug mode
 
 ```shell
-dotnet run watch -c Debug
+dotnet watch run  -c Debug
 ```
 
 Build the project
 
-´´´shell
+```shell
 dotnet build
-´´´
+```
