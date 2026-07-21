@@ -13,10 +13,12 @@ public class StoreContext : DbContext
     public DbSet<Command> Commands { get; set; }
     public DbSet<Price> Prices { get; set; }
     public DbSet<Person> Persons { get; set; }
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlite("Data Source=Store.db");
-    }
+
+    public StoreContext(DbContextOptions<StoreContext> options) : base(options) { }
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // {
+    //     optionsBuilder.UseSqlite("Data Source=Store.db");
+    // }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
