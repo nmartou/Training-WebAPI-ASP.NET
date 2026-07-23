@@ -27,5 +27,5 @@ public class Product
     [Required]
     public int PriceID { get; set; }
 
-    public Price Price { get; set; }
+    public Price? Price { get; set; }
 }
