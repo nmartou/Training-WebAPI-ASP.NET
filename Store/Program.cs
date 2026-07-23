@@ -21,6 +21,7 @@ class Program
         builder.Services.AddDbContext<StoreContext>(options=> options.UseSqlite(builder.Configuration.GetConnectionString("StoreConnection")));
        
         builder.Services.AddScoped<IPriceService, PriceService>();
+        builder.Services.AddScoped<IProductService, ProductService>();
         
         builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         
