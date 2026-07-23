@@ -1,14 +1,16 @@
 @Store_HostAddress = http://localhost:5257
 
+### Price - GET one
+
 GET {{Store_HostAddress}}/api/price
 Accept: application/json
 
-###
+### Price - GET all
 
 GET {{Store_HostAddress}}/api/price/3
 Accept: application/json
 
-###
+### Price - POST
 
 POST {{Store_HostAddress}}/api/price
 Content-Type: application/json
@@ -19,7 +21,7 @@ Content-Type: application/json
     "currency": "USD"
 }
 
-###
+### Price - PUT
 
 PUT {{Store_HostAddress}}/api/price/3
 Content-Type: application/json
@@ -32,7 +34,54 @@ Content-Type: application/json
     "discountEndDate": "2026-11-01T00:00:00"
 }
 
-###
+### Price - DELETE
 
 DELETE {{Store_HostAddress}}/api/price/3
+Content-Type: application/json
+
+###
+### Product
+###
+
+### Product - GET one
+
+GET {{Store_HostAddress}}/api/product/3
+Accept: application/json
+
+### Product - GET all
+
+GET {{Store_HostAddress}}/api/product
+Accept: application/json
+
+### Product - POST
+
+POST {{Store_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+    "ProductID": 3,
+    "name": "GTA VI",
+    "brand": "Rockstar Games",
+    "description": "One of the most attended game of the world",
+    "stock": 999,
+    "priceID": 5
+}
+
+### Product - PUT
+
+PUT {{Store_HostAddress}}/api/product/3
+Content-Type: application/json
+
+{
+    "ProductID": 3,
+    "name": "GTA VI",
+    "brand": "Rockstar Games",
+    "description": "One of the most attended game of the world",
+    "stock": 12,
+    "priceID": 5
+}
+
+### Product - DELETE
+
+DELETE {{Store_HostAddress}}/api/product/5
 Content-Type: application/json
