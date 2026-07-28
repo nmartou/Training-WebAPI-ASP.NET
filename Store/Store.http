@@ -85,3 +85,50 @@ Content-Type: application/json
 
 DELETE {{Store_HostAddress}}/api/product/5
 Content-Type: application/json
+
+###
+### Command
+###
+
+### Command - GET one
+
+GET {{Store_HostAddress}}/api/command/4
+Accept: application/json
+
+### Command - GET all
+
+GET {{Store_HostAddress}}/api/command
+Accept: application/json
+
+### Command - POST
+
+POST {{Store_HostAddress}}/api/command
+Content-Type: application/json
+
+{
+    "commandID": 4,
+    "totalQuanity": 1,
+    "totalPrice": 0,
+    "isPaid": false,
+    "sellerID": 1,
+    "buyerID": 3
+}
+
+### Command - PUT
+
+PUT {{Store_HostAddress}}/api/command/4
+Content-Type: application/json
+
+{
+    "commandID": 4,
+    "totalQuanity": 5,
+    "totalPrice": 0,
+    "isPaid": false,
+    "sellerID": 1,
+    "buyerID": 3
+}
+
+### Command - DELETE
+
+DELETE {{Store_HostAddress}}/api/command/4
+Content-Type: application/json
