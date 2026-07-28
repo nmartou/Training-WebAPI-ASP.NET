@@ -24,6 +24,7 @@ class Program
         builder.Services.AddScoped<IProductService, ProductService>();
         builder.Services.AddScoped<IPersonService, PersonService>();
         builder.Services.AddScoped<ICommandService, CommandService>();
+        builder.Services.AddScoped<IProductCommandService, ProductCommandService>();
         
         builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         
