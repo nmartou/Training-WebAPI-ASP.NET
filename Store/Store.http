@@ -85,3 +85,46 @@ Content-Type: application/json
 
 DELETE {{Store_HostAddress}}/api/product/5
 Content-Type: application/json
+
+###
+### Person
+###
+
+### Person - GET one
+
+GET {{Store_HostAddress}}/api/person/4
+Accept: application/json
+
+### Person - GET all
+
+GET {{Store_HostAddress}}/api/person
+Accept: application/json
+
+### Person - POST
+
+POST {{Store_HostAddress}}/api/person
+Content-Type: application/json
+
+{
+    "personID": 4,
+    "firstName": "Ezio",
+    "lastName": "Auditore",
+    "birthDate": "1459-06-24"
+}
+
+### Person - PUT
+
+PUT {{Store_HostAddress}}/api/person/4
+Content-Type: application/json
+
+{
+    "personID": 4,
+    "firstName": "Tyler",
+    "lastName": "Joseph",
+    "birthDate": "1988-12-01"
+}
+
+### Person - DELETE
+
+DELETE {{Store_HostAddress}}/api/person/4
+Content-Type: application/json
