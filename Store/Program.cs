@@ -23,6 +23,7 @@ class Program
         builder.Services.AddScoped<IPriceService, PriceService>();
         builder.Services.AddScoped<IProductService, ProductService>();
         builder.Services.AddScoped<IPersonService, PersonService>();
+        builder.Services.AddScoped<ICommandService, CommandService>();
         
         builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         

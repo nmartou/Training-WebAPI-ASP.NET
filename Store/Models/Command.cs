@@ -26,12 +26,12 @@ public class Command
     [Required]
     [ForeignKey("Seller")]
     public int SellerID { get; set; }
-    public Person Seller { get; set; }
+    public Person? Seller { get; set; }
 
     [Required]
     [ForeignKey("Buyer")]
     public int BuyerID { get; set; }
-    public Person Buyer { get; set; }
+    public Person? Buyer { get; set; }
 
     // public int InvoiceID { get; set; } // Theorical foreign key nullable
 
