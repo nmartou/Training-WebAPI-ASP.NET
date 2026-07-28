@@ -17,6 +17,6 @@ public class ProductCommand
     [Range(1, int.MaxValue, ErrorMessage = "Quantity is not greater than zero")]
     public int Quantity { get; set; }
 
-    public Command Command { get; set; }
-    public Product Product { get; set; }
+    public Command? Command { get; set; }
+    public Product? Product { get; set; }
 }
