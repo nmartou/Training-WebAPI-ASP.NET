@@ -174,3 +174,46 @@ Content-Type: application/json
 
 DELETE {{Store_HostAddress}}/api/command/4
 Content-Type: application/json
+
+###
+### ProductCommand
+###
+
+### ProductCommand - GET one
+
+GET {{Store_HostAddress}}/api/productcommand/7
+Accept: application/json
+
+### ProductCommand - GET all
+
+GET {{Store_HostAddress}}/api/productcommand
+Accept: application/json
+
+### ProductCommand - POST
+
+POST {{Store_HostAddress}}/api/productcommand
+Content-Type: application/json
+
+{
+    "productCommandID": 7,
+    "commandID": 4,
+    "productID": 1,
+    "quantity": 5
+}
+
+### ProductCommand - PUT
+
+PUT {{Store_HostAddress}}/api/productcommand/7
+Content-Type: application/json
+
+{
+    "productCommandID": 7,
+    "commandID": 4,
+    "productID": 2,
+    "quantity": 10
+}
+
+### ProductCommand - DELETE
+
+DELETE {{Store_HostAddress}}/api/productcommand/7
+Content-Type: application/json
