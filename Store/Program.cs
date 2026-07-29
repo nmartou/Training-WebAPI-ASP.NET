@@ -1,7 +1,6 @@
 
 using Microsoft.EntityFrameworkCore;
 using Store.Repositories;
-using Store.Services;
 
 namespace Store;
 
@@ -20,13 +19,8 @@ class Program
         
         builder.Services.AddDbContext<StoreContext>(options=> options.UseSqlite(builder.Configuration.GetConnectionString("StoreConnection")));
        
-        builder.Services.AddScoped<IPriceService, PriceService>();
-        builder.Services.AddScoped<IProductService, ProductService>();
-        builder.Services.AddScoped<IPersonService, PersonService>();
-        builder.Services.AddScoped<ICommandService, CommandService>();
-        builder.Services.AddScoped<IProductCommandService, ProductCommandService>();
-        
-        builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+        Initializations.ServicesInitialization(builder.Services);
+        Initializations.RepositoryInitialization(builder.Services);
         
         builder.Services.AddControllers();
         builder.Services.AddOpenApi();
